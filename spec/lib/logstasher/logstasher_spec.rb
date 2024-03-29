@@ -7,7 +7,7 @@ describe ::LogStasher do
         expect(::JSON.parse(json)).to eq("yolo" => "brolo")
       end
 
-      ::LogStasher.log_as_json(:yolo => :brolo)
+      ::LogStasher.log_as_json({ :yolo => :brolo })
     end
 
     context "with event" do
@@ -33,7 +33,7 @@ describe ::LogStasher do
           expect(::JSON.parse(json)).to eq("yolo" => "brolo", "metadata" => { "namespace" => "cooldude" })
         end
 
-        ::LogStasher.log_as_json(:yolo => :brolo)
+        ::LogStasher.log_as_json({ :yolo => :brolo })
       end
 
       it "merges metadata for LogStash::Event types" do

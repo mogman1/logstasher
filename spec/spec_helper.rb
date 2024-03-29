@@ -8,6 +8,8 @@ require 'bundler/setup'
 
 Bundler.require(:default, :development, :test)
 
+require 'rails/all'
+require 'action_dispatch/routing/inspector'
 require 'logstasher'
 
 RSpec.configure do |config|
