@@ -18,8 +18,11 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency "logstash-event", "~> 1.2"
+  s.add_runtime_dependency "rails", ">= 4.2.0", "< 7"
+  s.add_runtime_dependency "redis"
 
-  s.add_development_dependency "redis"
-  s.add_development_dependency "rspec"
   s.add_development_dependency "bundler", ">= 1.0.0"
+  s.add_development_dependency "pry-nav"
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "timecop"
 end
